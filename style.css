@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(to right, #c31432,#240b36);
+    color: rgb(177, 169, 169);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+
+header{
+    font-size: 2rem;
+    padding: 0;
+    
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form input,form button{
+    padding: 1rem;
+    border: none;
+    font-size: 1.2em;
+}
+
+.todo-input:hover{
+    transform: scale(1.1);
+
+}
+.todo-input:focus{
+    outline: none;
+    background-color: aquamarine;
+
+}
+.todo-button{
+    background-color:rgb(192, 16, 104);
+    color:white;
+    cursor: pointer;
+}
+
+.todo-button:hover{
+    transform: scale(1.2);
+
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    display: flex;
+    height: 45px;
+    margin: 0.5rem;
+    background-color: white;
+    justify-content: space-between;
+    color: black;
+    font-size: 1.2rem;
+    align-items:center;
+    transition: 0.5s all ease;
+}
+
+
+.todo li{
+    flex: 1;
+}
+.complete-button, .trash-button{
+    background-color: rgb(201, 9, 82);
+    padding: 0.95rem;
+    color: white;
+    border: none;
+    
+}
+.complete-button{
+    background-color: rgb(39, 172, 12);
+}
+
+.complete-button:hover, .trash-button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-check,
+.fa-trash-alt{
+    pointer-events: none;
+}
+.fall{
+    transform: translateY(8rem) rotate(20deg);
+    opacity: 0%;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5    ;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:rgb(192, 16, 104);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+select option{
+    font-weight: bold;
+    padding: 0.5rem;
+    
+}
+.select:hover:after{
+    background: white;
+    color: rgb(192, 16, 104);
+}
